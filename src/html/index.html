@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vendcar</title>
+	<link rel="stylesheet" type="text/css" href="../styles/index.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Carros à venda</h1>
+			<table id="myTable">
+				<thead>
+					<tr>
+						<th>Foto</th>
+						<th>Modelo</th>
+				  	<th>Ano</th>
+				  	<th>Marca</th>
+				  	<th>Cor</th>
+				  	<th>Comprar</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+
+			<hr>
+			<div>
+				<h1>Cadastro de carro</h1>
+				<form>
+
+				  <label for="model">Modelo:</label>
+        	<input type="text" id="model" />
+    			<br><br>
+          <label for="year">Ano:</label>
+          <input type="text" id="year" />
+    		  <br><br>
+          <label for="brand">Marca:</label>
+          <input type="text" id="brand" />
+          <br><br>
+          <label for="color">Cor:</label>
+          <input type="text" id="color" />
+    		  <br><br>
+          <label for="photo">Foto:</label>
+          <input type="text" id="photo" />
+					<br><br>
+					<label for="sold">Vendido</label>
+					<input type="checkbox" id="sold" name="sold" value="true">	
+					<br><br>
+					<button id="register" type="button">Cadastrar</button>
+				</form>
+			</div>
+
+	</div>
+	
+	<script src="../script/utils/util.js" type="text/javascript"></script>
+	<script src="../script/service/service.js" type="text/javascript"></script>
+	<script src="../script/controller/controller.js" type="text/javascript"></script>
+	<script src="../script/view/view.js" type="text/javascript"></script>
+	<script src="../script/model/carro.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			new CarController().showCarsGrid();
+		});
+	</script>
+
+</body>
+</html>
